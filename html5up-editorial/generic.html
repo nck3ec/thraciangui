@@ -69,10 +69,30 @@
 													<label for="msg">Bandwidth:</label>
 													<input type="number">													
 											 </div>
-											 <div> <!-- UPLOAD AUDIO FILE HERE-->
-													<label for="msg">Source File:</label>
-													<input type="number">	
-													<div id='audioButtonContainer'></div>									
+											 <div>
+													<div id='audioButtonContainer'></div>
+													<div class='view' id='addAudioFileMenu'>
+       													<div id='audioButtonContainer'>
+        													<form id='audioFileForm'>
+            													<div class='form-group'>
+                													<label for='audioFileBrowser'>Upload a file</label>
+                													<br/>
+               	 													<input type='file' class='form-control-file' id='audioFileBrowser'>
+            													</div>
+        													</form>
+        												<br/>
+        										<button class='btn btn-success' onclick="uploadAudioFile()">Upload</button>
+       										</div>
+       										<div id='audioFileListDiv'>
+        									<div id='panel1' class='panel panel-primary'>
+            									<div class='panel-heading'>Files</div>
+            									<div class='panel-body'>
+                									<ul class='list-group' id='audioFileList'></ul>
+            									</div>
+       										    </div>
+            										<button class='btn btn-danger' onclick="">Delete</button>
+            										<button class='btn btn-secondary' onclick="clearAudioFileBrowser()">Return</button>
+       											</div>									
 											</div>
 											</form>
 											<li>
